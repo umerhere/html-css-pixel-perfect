@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPIRALYZE DEV</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="master-container">
+
+    </div>
+    <div class="header-wrapper">
+      <!-- Navigation Bar -->
+      <nav class="navbar consistent-page-padding padding-top-2rem">
+        <img class="company-logo"  src="./assets/images/Vector.png" alt />
+        <div class="nav-links" id="navLinks">
+          <div class="nav-links-left">
+            <button class="active">HOME</button>
+            <button>ABOUT</button>
+            <button>CONTACT</button>
+            <span class="separator">|</span>
+          </div>
+          <button>
+            Call NOW FOR A CONSULT <span
+              class="number">&nbsp;123.456.7890</span>
+          </button>
+        </div>
+        <button class="menu-button" id="menuButton">☰</button>
+      </nav>
+
+      <!-- Header Section -->
+      <header class="header">
+        <div class="header-content consistent-page-padding">
+          <div class="left-section">
+            <!-- <img
+                    src="./assets/images/get-an-intervention.png"
+                    alt="Get an Intervention Icon"
+                /> -->
+            <h1 class="get-an-intervention">
+              <span class="outlined-text">GET AN</span><br />
+              <span class="filled-text">INTERVENTION</span>
+            </h1>
+            <p class="get-an-intervention-content">
+              Showing greater respect to older adults can be done in several
+              ways : acknowledging and putting to use the talents and skills of
+              older adults; creating intergenerational initiatives; and allowing
+              older adults to stay active and independent for as long as
+              possible.
+            </p>
+          </div>
+          <div class="right-section">
+            <div class="contact-card">
+              <h2>Contact Us</h2>
+              <form id="form">
+                <div class="form-row mb-5">
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      id="first-name"
+                      placeholder=" "
+                      required />
+                    <label for="first-name">First Name</label>
+                  </div>
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      id="last-name"
+                      placeholder=" "
+                      required />
+                    <label for="last-name">Last Name</label>
+                  </div>
+                </div>
+                <div class="form-row custom-margin">
+                  <div class="input-container">
+                    <input
+                      type="email"
+                      id="business-email"
+                      placeholder=" "
+                      required />
+                    <label for="business-email">Business Email</label>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" id="company" placeholder=" " required />
+                    <label for="company">Company</label>
+                  </div>
+                </div>
+                <div class="form-full mt-5">
+                  <div class="input-container">
+                    <input type="text" id="country" placeholder=" " required />
+                    <label for="country">Country</label>
+                  </div>
+                </div>
+              </form>
+              <button class="submit-button" type="submit">
+                <img
+                  width="24.5"
+                  height="24.5"
+                  src="./assets/images/vector-2.png"
+                  alt="sent" />&nbsp; Submit
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header-curve">
+          <div class="curve1">
+            <img src="./assets/images/Group-53.png" alt="Wave Design" />
+          </div>
+          <div class="curve2">
+            <img src="./assets/images/Rectangle-2.png" alt="Wave Design" />
+          </div>
+
+        </div>
+      </header>
+    </div>
+    <h1 class="main-section consistent-page-padding">
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+      <h1>Test</h1>
+    </h1>
+
+    <script>
+      document.getElementById("menuButton").addEventListener("click", function () {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
+      });
+    
+      const video = document.getElementById("footer-video");
+      const playIcon = document.querySelector(".play-icon");
+    
+      function playVideo() {
+        if (video.paused) {
+          video.play();
+          playIcon.style.display = "none";
+        } else {
+          video.pause();
+          playIcon.style.display = "block";
+        }
+      }
+    
+      let slideIndex = 1;
+      showSlides(slideIndex);
+    
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+    
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+    
+      function showSlides(n) {
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+        for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        checkScreenSize();
+      });
+    
+      let isWrapped = false;
+      let originalText = ""; // Store the original text
+    
+      function checkScreenSize() {
+        const container = document.querySelector(".custom-row-for-features");
+        const sections = [...document.querySelectorAll(".custom-row-for-features .section:not(.button-section)")];
+        const buttonSection = document.querySelector(".button-section");
+    
+        if (!container || sections.length === 0 || !buttonSection) {
+          console.warn("❌ Required elements not found.");
+          return;
+        }
+    
+        const movedTextElement = document.querySelector(".move-text-from");
+        const targetElement = document.querySelector(".move-text-to");
+    
+        if (movedTextElement && targetElement) {
+          const fullText = movedTextElement.dataset.fullText || movedTextElement.textContent.trim();
+          const extractedText = fullText.split("community). ")[1]?.trim();
+          const remainingText = fullText.split(").")[0] + ").";
+    
+          if (window.innerWidth <= 768) {
+            if (!movedTextElement.dataset.fullText) movedTextElement.dataset.fullText = fullText;
+            if (extractedText) {
+              movedTextElement.textContent = remainingText;
+              targetElement.textContent = extractedText + " " + targetElement.textContent;
+            }
+          } else {
+            if (movedTextElement.dataset.fullText) {
+              movedTextElement.textContent = movedTextElement.dataset.fullText;
+              targetElement.textContent = targetElement.textContent.replace(extractedText, "").trim();
+            }
+          }
+        }
+    
+        if (window.innerWidth <= 768 && !isWrapped) {
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("convertable-sections");
+    
+          sections.forEach(section => wrapper.appendChild(section));
+          container.insertBefore(wrapper, buttonSection);
+    
+          isWrapped = true;
+        } else if (window.innerWidth > 768 && isWrapped) {
+          const wrapper = document.querySelector(".convertable-sections");
+          if (wrapper) {
+            while (wrapper.firstChild) {
+              container.insertBefore(wrapper.firstChild, wrapper);
+            }
+            wrapper.remove();
+          }
+          isWrapped = false;
+        }
+      }
+    
+      let lastWidth = window.innerWidth;
+      window.addEventListener("resize", () => {
+        if ((lastWidth > 768 && window.innerWidth <= 768) || (lastWidth <= 768 && window.innerWidth > 768)) {
+          checkScreenSize();
+        }
+        lastWidth = window.innerWidth;
+      });
+    </script>
+
+  </body>
+</html>
