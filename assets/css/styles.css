@@ -27,8 +27,18 @@ html, body {
 }
 
 .padding-top-2rem {
-    padding-top: 1.2rem;
+    padding-top: 1.15rem;
 }
+
+body {
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 
 /* Generic Classes End */
 
@@ -59,20 +69,50 @@ html, body {
 
 }
 
+.nav-links-list {
+    gap: 28px;
+    display: flex;
+    flex-direction: row;
+}
+
+.call-now-button {
+font-family: Montserrat;
+font-weight: 700;
+font-size: 14px;
+line-height: 41px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+
+.number {
+    /* padding-left: 0 !important; */
+    /* padding-right: 0 !important; */
+    color: #5BC8AF;
+}
+
 .nav-links {
-    margin: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 49px;
+    font-weight: 400;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 41px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
 }
 
 .nav-links button {
     background: none;
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 14px;
+    /* font-size: 1rem; */
     cursor: pointer;
-    padding: 5px 10px;
 }
 
 .nav-links-left {
@@ -83,12 +123,16 @@ html, body {
     button {
         color: grey !important;
     }
-    .active {
-        color: white !important;
-        text-decoration: underline;
-    }
 }
 
+.active {
+    font-weight: 700;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-offset: 0%;
+    text-decoration-thickness: 0%;
+}
 
 .logo {
     font-size: 1.5rem;
@@ -121,7 +165,7 @@ html, body {
 
 .separator {
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 /* General Media Queries - Start */
@@ -153,8 +197,11 @@ html, body {
 
     .nav-links{
         flex-direction: column;
-        gap: 0px !important;
+        /* gap: 0px !important; */
         align-items: end !important;
+        font-family: Montserrat;
+
+
     }
 
     .nav-links-left > button {
@@ -162,10 +209,6 @@ html, body {
     }
 
 
-    .header {
-        /* padding: 0 !important; */
-        /* padding-bottom: 80px !important; */
-    }
     /* header */
     .header-content {
         flex-direction: column;
@@ -191,7 +234,8 @@ html, body {
     color: white;
     text-align: left;
     position: relative; /* Ensure it’s the positioning context for the curves */
-  padding-bottom: 80px;
+    padding-bottom: 80px;
+    margin-top: 69px;
     /* padding: 80px 10%; */
 }
 
@@ -388,7 +432,7 @@ vertical-align: middle;
 }
 
 /* Submit Button */
-button {
+.submit-button {
     display: flex;
     align-items: center;
     justify-content: center;
